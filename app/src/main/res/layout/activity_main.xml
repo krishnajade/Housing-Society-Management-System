@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <TextView
+        android:id="@+id/visitor_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Visitor Name"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/visitor_name_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/visitor_name_label"
+        android:layout_alignBaseline="@id/visitor_name_label"
+        android:hint="Enter visitor name"/>
+
+    <!-- Add Flat Owner Name EditText with label -->
+    <TextView
+        android:id="@+id/flat_owner_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flat Owner Name"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"/>
+
+    <EditText
+        android:id="@+id/flat_owner_name_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/flat_owner_name_label"
+        android:layout_alignBaseline="@id/flat_owner_name_label"
+        android:hint="Enter flat owner name"/>
+
+    <!-- Add Camera Button to open the Camera -->
+    <Button
+        android:id="@+id/camera_button"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:layout_below="@id/flat_owner_name_label"
+        android:layout_marginTop="30dp"
+        android:text="Camera" />
+
+    <!-- add ImageView to display the captured image -->
+    <ImageView
+        android:id="@+id/click_image"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/camera_button"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Add Submit Button to start the next activity -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/click_image"
+        android:onClick="onSubmitButtonClick"/>
+
+</RelativeLayout>
